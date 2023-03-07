@@ -1,6 +1,6 @@
-# Volera - Low-Friction Freelance Marketplace
+# Welcome to Volera: 
 
-A Freelance marketplace being built on the XRP Ledger.
+A Low-Friction Freelance Marketplace built on the XRPL
 
 A new way to hire and retain freelancers in an ethical and sustainable way with the lowest possible platform fees.
 
