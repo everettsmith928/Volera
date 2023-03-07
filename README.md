@@ -1,4 +1,4 @@
-# Volera
+# Volera - Low-Friction Freelance Marketplace
 
 A Freelance marketplace being built on the XRP Ledger.
 
