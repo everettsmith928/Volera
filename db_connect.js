@@ -15,7 +15,6 @@ var fs = require('fs');
     }
 });
 
-
 // Connect to DB
 con.connect(function(err) {
   if (err) throw err;
