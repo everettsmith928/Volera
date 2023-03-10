@@ -651,10 +651,10 @@ input[type=text]:focus, input[type=password]:focus {
     }
 
     .hero-image {
-        background: url(wave2.svg);
+        background: url(/images/wave2.svg);
         background-size: cover;
         width: 100%;
-        min-height: 95vh;
+        min-height:95vh;
         text-align: center;
         background-repeat: no-repeat;
     }
