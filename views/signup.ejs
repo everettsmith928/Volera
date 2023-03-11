@@ -8,8 +8,15 @@
 
     </div>
     <div class="container">           
-        <h4 class="title" a href="index.html">volera</h4></a>
+        <a href = "/"><h4 class="title">volera</h4></a>
     </div>
+
+    <% if (userMessage.length > 0) { %>
+        <div style="color: white; font-size: 40px; width: 50%; margin: auto; text-align: center; padding: 5px; border: 3px solid #00ff9b; border-radius: 30px;"><p><%- userMessage %></p>
+        <a href = "/"><p style="color: white;"><b>Return Home</b></p></a>
+        </div>
+    <% } %>
+
     <form action = "/signup" method = "POST">
         <div class="container">
             <label for="fname"></label>

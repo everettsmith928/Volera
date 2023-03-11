@@ -1,4 +1,5 @@
 const express = require('express');
+const dbController = require('./controllers/dbController');
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get('/', (req, res) => {
 
 //About
 app.get('/about', (req, res) => {
+    console.log(req.user);
     res.render('about');
 })
 
@@ -31,12 +33,11 @@ app.get('/roadmap', (req, res) => {
 
 //Signup
 app.get('/signup', (req, res) => {
-    res.render('signup');
+    res.render('signup', {userMessage: ''});
 })
 
-app.post('/signup', (req, res) => {
-    console.log(req.body);
-})
+//Signup Form Post
+app.post('/signup', dbController.signup);
 
 //Default
 app.use((req, res) => {
