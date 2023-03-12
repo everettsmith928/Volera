@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const fs = require('fs');
 require('dotenv').config();
 
 // Send welcome Email to Registered user
@@ -9,7 +10,6 @@ const transporter = nodemailer.createTransport({
         pass: process.env.MAIL_PASSWORD
     }
 });
-console.log('Email connected');
 
 const signup = (user) => {
     console.log('Emailing ' + user.first_name + ' at ' + user.email);
@@ -18,7 +18,7 @@ const signup = (user) => {
         from: process.env.MAIL_USERNAME,
         to: user.email,
         subject: 'Volera Milestones Notification Sign-up',
-        html: 'Welcome ' + user.first_name + '. Thank you for signing up! We will notify you when milestones have been completed.'
+        html: 'Welcome ' + user.first_name + '.<br>' + fs.readFileSync('./emails/signup.html')
     }
 
     transporter.sendMail(mailOptions, function (error, info) {

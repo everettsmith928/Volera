@@ -22,7 +22,6 @@ app.get('/', (req, res) => {
 
 //About
 app.get('/about', (req, res) => {
-    console.log(req.user);
     res.render('about');
 })
 
