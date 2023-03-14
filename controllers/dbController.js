@@ -47,7 +47,7 @@ const signup = (req, res) => {
       }
       //Added to sheet
       else {
-        userMessage = 'Thank you ' + req.body.first_name + '!<br>Your email ' + req.body.email + ' has been added to signup sheet.';
+        userMessage = 'Thank you ' + req.body.first_name + '!<br><br>Your email ' + req.body.email + ' has been added to signup sheet.';
         emailController.signup(req.body);
       }
       //Redirect

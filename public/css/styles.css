@@ -1,31 +1,38 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: #222323;
     font-size: 100%;
     padding: 0px;
     margin: 0px;
     height: auto;
+    overflow:overlay;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    display: none;
-}
-
-/* width */
 ::-webkit-scrollbar {
-    width: 0px;
-    color: #00ff9b;
-    position: fixed;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff9b; 
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff0064; 
 }
 
 .platformbody {
-    display: flex;
-    padding: 0px;
-    margin: 0px;
-    max-height: 100vh;
+display: flex;
+padding: 0px;
+margin: 0px;
+max-height: 100vh;
 }
 
 #azure {
@@ -81,7 +88,7 @@ h4 {
 }
 
 .title {
-    font-size: 6rem;
+    font-size: 5rem;
     letter-spacing: 20px;
     padding-left: 1rem;
     line-height: normal;
@@ -321,7 +328,7 @@ p {
 }
 
 a:link {
-    text-align: center;
+   
     text-decoration: none;
 }
 
@@ -407,6 +414,10 @@ a:link {
     vertical-align: middle;
     height: 4vh;
     margin: 10px; 
+}
+
+.boxfooter {
+    text-align: center;
 }
 
 .navbox:hover {
@@ -495,10 +506,19 @@ input {
     min-height: 20px;
 }
 
+input[type=textarea] {
+    display:block;
+    padding: 1rem;
+    border: 1px solid #222323;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: 20px;
+    resize: vertical;
+    height:500px;
+    width:100%;
+}
 
-input[type=text], select, textarea {
-    
-    max-height: 50px;
+input[type=text], select {
     display: block;
     padding: 1rem;
     border: 1px solid #222323;
@@ -508,7 +528,7 @@ input[type=text], select, textarea {
     resize: vertical;
 }
 
-input[type=password], select, textarea {
+input[type=password], select {
     
     max-height: 50px;
     display: block;
@@ -528,7 +548,7 @@ input[type=submit] {
     padding: 20px;
     color: azure;
     border: none;
-    border-radius: 4px;
+    border-radius: 50px;
     cursor: pointer;
 }
 

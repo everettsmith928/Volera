@@ -35,6 +35,12 @@ app.get('/signup', (req, res) => {
     res.render('signup', {userMessage: ''});
 })
 
+//Contact
+app.get('/contact', (req, res) => {
+    res.render('contact');
+})
+
+
 //Signup Form Post
 app.post('/signup', dbController.signup);
 
