@@ -25,6 +25,32 @@ con.connect(function (err) {
   console.log("Database Connected!");
 });
 
+//CONTACT
+const contact = (req, res) => {
+  console.log(req.body);
+
+  var userMessage = '';
+  con.query(
+    'INSERT INTO contact_sheet SET ?', //Question mark is object
+    req.body,                          //Object to be passed
+    function (err, results) {
+      //Error handling
+      if (err) {
+        console.log(err);
+        userMessage = 'There was an error adding ' + req.body.email;
+      }
+      //Added to sheet
+      else {
+        userMessage = 'Thank you for your feedback. We will attempt to respond within 72 hours.';
+        emailController.signup(req.body);
+      }
+      //Redirect
+      console.log(userMessage);
+      res.render('./signup', { userMessage: userMessage });
+    }
+  );
+}
+
 //SIGNUP
 const signup = (req, res) => {
   console.log(req.body);
@@ -58,32 +84,6 @@ const signup = (req, res) => {
   );
 }
 
-//CONTACT
-const contact = (req, res) => {
-  console.log(req.body);
-
-  var userMessage = '';
-  con.query(
-    'INSERT INTO contact_sheet SET ?', //Question mark is object
-    req.body,                          //Object to be passed
-    function (err, results) {
-      //Error handling
-      if (err) {
-        console.log(err);
-        userMessage = 'There was an error adding ' + req.body.email;
-      }
-      //Added to sheet
-      else {
-        userMessage = 'Thank you for your feedback. We will attempt to respond within 72 hours.';
-        emailController.signup(req.body);
-      }
-      //Redirect
-      console.log(userMessage);
-      res.render('./signup', { userMessage: userMessage });
-    }
-  );
-}
-
 function toTitleCase(str) {
   return str.replace(
     /\w\S*/g,
@@ -94,5 +94,6 @@ function toTitleCase(str) {
 }
 
 module.exports = {
-  signup
+  signup,
+  contact
 }

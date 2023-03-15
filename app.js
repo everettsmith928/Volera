@@ -45,7 +45,7 @@ app.get('/contact', (req, res) => {
 })
 
 //Contact POST
-app.post('/contact', dbController.signup);
+app.post('/contact', dbController.contact);
 
 
 //Default
