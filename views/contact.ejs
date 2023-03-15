@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/header.ejs') %>
-<body>
-<%- include('./partials/nav.ejs') %>
+
+  <body>
+    <%- include('./partials/nav.ejs') %>
 
 
-<div class="splashimage textcenter" id="azure">
-   
-        <form action="action_page.php">
-      
-          <label for="fname"><h2 class="abouttitle">Email</h2></label>
+      <div class="splashimage textcenter" id="azure">
+
+        <form action="/contact" method="POST">
+
+          <label for="fname">
+            <h2 class="abouttitle">Email</h2>
+          </label>
           <input type="text" id="fname" name="firstname" placeholder="Email..">
-      
-          <label for="lname"><h2 class="abouttitle">Subject</h2></label>
-          <input type="text" id="lname" name="lastname" placeholder="Subject..">   
-      
-          <label for="subject"><h2 class="abouttitle">Form</h2></label>
+
+          <label for="lname">
+            <h2 class="abouttitle">Subject</h2>
+          </label>
+          <input type="text" id="lname" name="lastname" placeholder="Subject..">
+
+          <label for="subject">
+            <h2 class="abouttitle">Form</h2>
+          </label>
           <input type="textarea" wrap="hard">
-      
+
           <input type="submit" value="Submit">
-      
+
         </form>
 
-</div>
-<%- include('./partials/footer.ejs') %>
-</body>
+      </div>
+      <%- include('./partials/footer.ejs') %>
+  </body>
+
 </html>

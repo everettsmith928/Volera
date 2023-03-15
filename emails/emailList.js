@@ -11,7 +11,7 @@ const con = mysql.createConnection({
     database: process.env.DATABASE,
     port: process.env.PORT,
     ssl: {
-        ca: fs.readFileSync('./ca-certificate.crt'),
+        ca: fs.readFileSync('../ca-certificate.crt'),
         rejectUnauthorized: false
     }
 });
@@ -34,7 +34,6 @@ const transporter = nodemailer.createTransport({
 con.connect(function (err) {
     if (err) throw err;
     userList = [];
-
     //Grab users
     con.query("SELECT email FROM signup_sheet", function (err, result, fields) {
         if (err) throw err;

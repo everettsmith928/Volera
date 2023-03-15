@@ -4,6 +4,7 @@ const fs = require('fs');
 const emailController = require('./emailController');
 require('dotenv').config();
 
+console.log(process.env.DATABASE);
 
 // Database Connection
 const con = mysql.createConnection({
@@ -24,7 +25,7 @@ con.connect(function (err) {
   console.log("Database Connected!");
 });
 
-//Add user to signup sheet
+//SIGNUP
 const signup = (req, res) => {
   console.log(req.body);
   req.body.first_name = toTitleCase(req.body.first_name);
@@ -52,7 +53,33 @@ const signup = (req, res) => {
       }
       //Redirect
       console.log(userMessage);
-      res.render('./signup', { userMessage: userMessage});
+      res.render('./signup', { userMessage: userMessage });
+    }
+  );
+}
+
+//CONTACT
+const contact = (req, res) => {
+  console.log(req.body);
+
+  var userMessage = '';
+  con.query(
+    'INSERT INTO contact_sheet SET ?', //Question mark is object
+    req.body,                          //Object to be passed
+    function (err, results) {
+      //Error handling
+      if (err) {
+        console.log(err);
+        userMessage = 'There was an error adding ' + req.body.email;
+      }
+      //Added to sheet
+      else {
+        userMessage = 'Thank you for your feedback. We will attempt to respond within 72 hours.';
+        emailController.signup(req.body);
+      }
+      //Redirect
+      console.log(userMessage);
+      res.render('./signup', { userMessage: userMessage });
     }
   );
 }
@@ -60,7 +87,7 @@ const signup = (req, res) => {
 function toTitleCase(str) {
   return str.replace(
     /\w\S*/g,
-    function(txt) {
+    function (txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     }
   );

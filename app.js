@@ -30,19 +30,23 @@ app.get('/roadmap', (req, res) => {
     res.render('roadmap');
 })
 
-//Signup
+//Signup GET
 app.get('/signup', (req, res) => {
     res.render('signup', {userMessage: ''});
 })
 
-//Contact
+//Signup POST
+app.post('/signup', dbController.signup);
+
+
+//Contact GET
 app.get('/contact', (req, res) => {
     res.render('contact');
 })
 
+//Contact POST
+app.post('/contact', dbController.signup);
 
-//Signup Form Post
-app.post('/signup', dbController.signup);
 
 //Default
 app.use((req, res) => {
