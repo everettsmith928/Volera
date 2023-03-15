@@ -412,8 +412,9 @@ a:link {
     align-items: center;
     column-width: auto;
     vertical-align: middle;
-    height: 4vh;
-    margin: 10px; 
+    height: 2vh;
+    padding: 10px; 
+    font-size: .75rem;
 }
 
 .boxfooter {
@@ -435,6 +436,7 @@ a:link {
     justify-items: center;
     margin: 0px;
     background-color: azure;
+    height:20vh;
 }
 
 .header {
@@ -660,6 +662,11 @@ input[type=text]:focus, input[type=password]:focus {
     }
     .nav {
         grid-template-columns: repeat(4, 1fr);
+        height:4vh;
+    }
+
+    .navbox {
+        font-size: 1rem;
     }
 
     .splashimage {
