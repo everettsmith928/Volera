@@ -41,12 +41,11 @@ app.post('/signup', dbController.signup);
 
 //Contact GET
 app.get('/contact', (req, res) => {
-    res.render('contact');
+    res.render('contact', {userMessage: ''});
 })
 
 //Contact POST
 app.post('/contact', dbController.contact);
-
 
 //Default
 app.use((req, res) => {
