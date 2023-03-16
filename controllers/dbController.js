@@ -37,16 +37,16 @@ const contact = (req, res) => {
       //Error handling
       if (err) {
         console.log(err);
-        userMessage = 'There was an error adding ' + req.body.email;
+        userMessage = 'There was an error, feel free to manually email us at ' + process.env.MAIL_USERNAME + '<br>' + req.body.contact_form;
       }
       //Added to sheet
       else {
         userMessage = 'Thank you for your feedback. We will attempt to respond within 72 hours.';
-        emailController.signup(req.body);
+        emailController.contact(req.body);
       }
       //Redirect
       console.log(userMessage);
-      res.render('./signup', { userMessage: userMessage });
+      res.render('./contact', { userMessage: userMessage });
     }
   );
 }

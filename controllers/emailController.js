@@ -20,7 +20,24 @@ const signup = (user) => {
         subject: 'Volera Milestones Notification Sign-up',
         html: 'Welcome ' + user.first_name + '.<br>' + fs.readFileSync('./emails/signup.html')
     }
+    sendEmail(mailOptions);
+}
 
+const contact = (user) => {
+    console.log('Emailing contact form verification to:' + user.contact_email);
+
+    var mailOptions = {
+        from: process.env.MAIL_USERNAME,
+        to: user.contact_email,
+        subject: 'Volera Contact Form',
+        html: 'Thank you for your question submission. We will get back to you in 72 hours in regards to: <br>'
+            + user.contact_subject + '<br><br>' + user.contact_form
+    }
+
+    sendEmail(mailOptions);
+}
+
+function sendEmail(mailOptions) {
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
@@ -31,5 +48,6 @@ const signup = (user) => {
 }
 
 module.exports = {
-    signup
+    signup,
+    contact
 }

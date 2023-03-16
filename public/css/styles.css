@@ -506,18 +506,22 @@ input {
     font-family: "Roboto", serif;
     font-size: 1.5rem;
     min-height: 20px;
+    margin-bottom: 20px;
 }
 
-input[type=textarea] {
+textarea {
     display:block;
     padding: 1rem;
     border: 1px solid #222323;
     border-radius: 8px;
     box-sizing: border-box;
-    margin: 20px;
+    padding: 20px;
     resize: vertical;
     height:500px;
     width:100%;
+    margin-bottom: 20px;
+    font-family: "Roboto", serif;
+    font-size: 1.5rem;
 }
 
 input[type=text], select {
@@ -526,8 +530,9 @@ input[type=text], select {
     border: 1px solid #222323;
     border-radius: 8px;
     box-sizing: border-box;
-    margin: 20px;
+    padding: 20px;
     resize: vertical;
+    width: 100%;
 }
 
 input[type=password], select {
@@ -574,6 +579,19 @@ button[type=submit]:hover, button[type=reset]:hover, button[type=link]:hover {
 input[type=text]:focus, input[type=password]:focus {
     background-color: #c4d0d0;
     outline: none;
+}
+
+.usermessage {
+    color: #222323; 
+    width:fit-content;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    text-align: center; 
+    word-wrap: break-word;
+    padding: 5px; 
+    border: 3px solid #222323; 
+    border-radius: 30px;
 }
 
 /* The message box is shown when the user clicks on the password field */
