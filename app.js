@@ -12,6 +12,9 @@ app.set('view engine', 'ejs');
 //Share public files
 app.use(express.static('public'));
 
+//Favicon
+app.use('/favicon.ico', express.static('public/images/favicon.ico'));
+
 //Grab form data
 app.use(express.urlencoded({extended: true}));
 
