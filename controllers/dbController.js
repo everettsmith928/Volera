@@ -7,7 +7,7 @@ require('dotenv').config();
 console.log(process.env.DATABASE);
 
 // Database Connection
-const con = mysql.createConnection({
+const pool = mysql.createPool({
   host: process.env.HOST,
   user: process.env.USER,
   password: process.env.PASSWORD,
@@ -20,9 +20,16 @@ const con = mysql.createConnection({
 });
 
 // Connect to DB
-con.connect(function (err) {
-  if (err) throw err;
-  console.log("Database Connected!");
+pool.getConnection(function (err, con) {
+  if (err) {
+    if (eventNameIndex.error) {
+      eventNameIndex.error();
+    }
+  }
+  else if (con) {
+    console.log("Database Connected!");
+    con.release();
+  }
 });
 
 //CONTACT
@@ -30,7 +37,7 @@ const contact = (req, res) => {
   console.log(req.body);
 
   var userMessage = '';
-  con.query(
+  pool.query(
     'INSERT INTO contact_sheet SET ?', //Question mark is object
     req.body,                          //Object to be passed
     function (err, results) {
@@ -59,14 +66,15 @@ const signup = (req, res) => {
   req.body.email = req.body.email.toLowerCase();
 
   var userMessage = '';
-  con.query(
+  pool.query(
     'INSERT INTO signup_sheet SET ?', //Question mark is object
     req.body,                         //Object to be passed
     function (err, results) {
       //Error handling
       if (err) {
+        err = undefined;
         console.log(err);
-        if (err.sqlMessage.includes('Duplicate')) {
+        if (err?.sqlMessage.includes('Duplicate')) {
           userMessage = req.body.email + ' already exists!';
         } else {
           userMessage = 'There was an error adding ' + req.body.email;
