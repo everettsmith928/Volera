@@ -72,7 +72,6 @@ const signup = (req, res) => {
     function (err, results) {
       //Error handling
       if (err) {
-        err = undefined;
         console.log(err);
         if (err?.sqlMessage.includes('Duplicate')) {
           userMessage = req.body.email + ' already exists!';
