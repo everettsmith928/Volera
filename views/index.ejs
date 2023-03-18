@@ -4,24 +4,26 @@
 <%- include('./about/partials/header.ejs') %>
 
     <body>
-            <div class="boxheader" id="azure">
-                <a href="/platform">
-                    <div class="box">
-                        <h2 class="textcenter fadehide">The Platform</h2>
-                        <p>Dive into Volera's freelance platform and experience frictionless transactions built on top
-                            of XUMM and the XRP ledger leaving you with only a 5% fee.</p>
-                    </div>
-                </a>
-                <a href="/about">
-                <div class="box">
+        <div class="boxheader" style="background: #333" id="azure">
+            <a href="/platform">
+                <div class="box"
+                    style="border: solid 2px #00ff9b; border-radius: 25px; margin:50px; background:  #effff9;">
+                    <h2 class="textcenter fadehide">The Platform</h2>
+                    <p>Dive into Volera's freelance platform and experience frictionless transactions built on top
+                        of XUMM and the XRP ledger leaving you with only a 5% fee.</p>
+                </div>
+            </a>
+            <a href="/about">
+                <div class="box"
+                    style="border: solid 2px #00ff9b; border-radius: 25px; margin:50px; background: #effff9;">
                     <h2 class="textcenter fadehide">The About</h2>
                     <p>Explore what Volera is all about and look at the technology involved behind it. Look at the
                         projected roadmap or sign up for milestone notifications</p>
                 </div>
-                </a>
-            </div>
+            </a>
+        </div>
 
-            <%- include('./about/partials/footer.ejs') %>
+        <%- include('./about/partials/footer.ejs') %>
     </body>
 
 </html>
