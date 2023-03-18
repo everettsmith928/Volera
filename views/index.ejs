@@ -3,27 +3,32 @@
 
 <%- include('./about/partials/header.ejs') %>
 
-    <body>
-        <div class="boxheader" style="background: #333" id="azure">
+<body>
+    
+    <section class="register wave4">
+        <div class="spacer textcenter">
+            <h4 class="title">volera</h4>
+        </div>
+        <div class="spacerdouble"></div>
+            <div class="boxheader" style="background:none; vertical-align: middle;">
             <a href="/platform">
                 <div class="box"
-                    style="border: solid 2px #00ff9b; border-radius: 25px; margin:50px; background:  #effff9;">
-                    <h2 class="textcenter fadehide">The Platform</h2>
-                    <p>Dive into Volera's freelance platform and experience frictionless transactions built on top
+                    style="border: solid 2px #00ff9b; border-radius: 25px; margin:50px; background:azure;">
+                    <h2 class="textcenter fadehide">Launch Platform</h2>
+                    <p style="color:#222323">Dive into Volera's freelance platform and experience frictionless transactions built on top
                         of XUMM and the XRP ledger leaving you with only a 5% fee.</p>
                 </div>
             </a>
             <a href="/about">
                 <div class="box"
-                    style="border: solid 2px #00ff9b; border-radius: 25px; margin:50px; background: #effff9;">
+                    style="border: solid 2px #00ff9b; border-radius: 25px; margin:50px; background:azure;">
                     <h2 class="textcenter fadehide">The About</h2>
-                    <p>Explore what Volera is all about and look at the technology involved behind it. Look at the
-                        projected roadmap or sign up for milestone notifications</p>
+                    <p style="color:#222323">Explore what Volera is building, and the technology involved behind it. Take a look at the
+                        projected roadmap, or sign up for milestone notifications and early-access.</p>
                 </div>
+            </div>    
             </a>
-        </div>
-
-        <%- include('./about/partials/footer.ejs') %>
+    </section>    
     </body>
 
 </html>
