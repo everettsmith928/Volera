@@ -53,7 +53,7 @@ const contact = (req, res) => {
       }
       //Redirect
       console.log(userMessage);
-      res.render('./contact', { userMessage: userMessage });
+      res.render('./about/contact', { userMessage: userMessage });
     }
   );
 }
@@ -86,7 +86,7 @@ const signup = (req, res) => {
       }
       //Redirect
       console.log(userMessage);
-      res.render('./signup', { userMessage: userMessage });
+      res.render('./about/signup', { userMessage: userMessage });
     }
   );
 }

@@ -1,5 +1,6 @@
 const express = require('express');
-const dbController = require('./controllers/dbController');
+const aboutRoutes = require('./routes/aboutRoutes');
+const platformRoutes = require('./routes/platformRoutes');
 
 const app = express();
 
@@ -18,37 +19,16 @@ app.use('/favicon.ico', express.static('public/images/favicon.ico'));
 //Grab form data
 app.use(express.urlencoded({extended: true}));
 
-//Index
+//Splash page
 app.get('/', (req, res) => {
     res.render('index');
 });
 
-//About
-app.get('/about', (req, res) => {
-    res.render('about');
-})
+//About pages
+app.use('/about', aboutRoutes);
 
-//Roadmap
-app.get('/roadmap', (req, res) => {
-    res.render('roadmap');
-})
-
-//Signup GET
-app.get('/signup', (req, res) => {
-    res.render('signup', {userMessage: ''});
-})
-
-//Signup POST
-app.post('/signup', dbController.signup);
-
-
-//Contact GET
-app.get('/contact', (req, res) => {
-    res.render('contact', {userMessage: ''});
-})
-
-//Contact POST
-app.post('/contact', dbController.contact);
+//About pages
+app.use('/platform', platformRoutes);
 
 //Default
 app.use((req, res) => {

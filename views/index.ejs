@@ -1,58 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/header.ejs') %>
-<body>
-<%- include('./partials/nav.ejs') %>
+<%- include('./about/partials/header.ejs') %>
 
-<section class="splashimage skyline">
-    <div class="spacer">
-    </div>
-    <h2 class="bodytitle hidden textcenter">A Low-Friction Freelance Platform</h2>
-    <div class="spacerdouble">
-    </div>       
-</section>   
-<div class="splashimage">
-<h2 class="hidden bodytitle textcenter">The Platform</h2>
-<p id="h1reverse">
-    Built for connecting gig workers, remote employees, enterprises, and startups building across the globe.<br><br>
-    Create jobs, apply for jobs, showcase your portfolio and get work done from anywhere, anytime, and receive payment instantly without the high-fees.<br /><br />
-</p>
-<div class="spacer"></div>
-   
-</div>   
-<section>
-<div class="splashimage">
-    <h4 class="hidden bodytitle textcenter" id="accent">5%<br> PLATFORM FEE</h4><h2 class="hidden textcenter" id="h1reverse">High-Fees Forever Gone</h2>
-</div>
-</section>
-<section>
-<div class="splashimage">           
-        <img src="/images/handshake.png" class="hidden" id="logo">     
-    <h2 class="hidden bodytitle textcenter">The Philosophy</h2>
-    <p id="h1reverse">
-        Everyone should have access to the skills and services they need to succeed. Without sacrificing 20% to do what they love.<br><br>
-        Volera makes it easy for freelancers to find and apply for projects that match their skills, and for clients to find the person for the job.
-    </p>
-</div>
-</section>
-<section>
-<div class="splashimage">
-    <img src="/images/transfer.png" class="hidden" id="logo">
-    <h2 class="hidden bodytitle textcenter">How it Works</h2>
-    <p id="h1reverse">
-        Volera uses a time-tested blockchain technology to facilitate secure and transparent transactions between freelancers and clients.<br><br>
-        Built on top of xumm, a third-party mobile self-custody wallet. All payments between users are instant, secured by escrow, and available 24/7. In the digital age value deserves to move like information.
-    </p>
-    <div class="spacer"></div>
-    <a class="button link textcenter" href="about" style="background-color:azure;">Learn More</a>       
-</section>
-<section class="splashimage ctawave fadeshow">      
-</section>
-<div class="splashimage">
-    <a class="button link textcenter" href="signup" style="background-color:azure;">Sign Up</a>       
-</div>
+    <body>
+            <div class="boxheader" id="azure">
+                <a href="/platform">
+                    <div class="box">
+                        <h2 class="textcenter fadehide">The Platform</h2>
+                        <p>Dive into Volera's freelance platform and experience frictionless transactions built on top
+                            of XUMM and the XRP ledger leaving you with only a 5% fee.</p>
+                    </div>
+                </a>
+                <a href="/about">
+                <div class="box">
+                    <h2 class="textcenter fadehide">The About</h2>
+                    <p>Explore what Volera is all about and look at the technology involved behind it. Look at the
+                        projected roadmap or sign up for milestone notifications</p>
+                </div>
+                </a>
+            </div>
 
-<%- include('./partials/footer.ejs') %>
-</body>
+            <%- include('./about/partials/footer.ejs') %>
+    </body>
+
 </html>
