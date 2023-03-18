@@ -1,7 +1,7 @@
 const express = require('express');
 const aboutRoutes = require('./routes/aboutRoutes');
 const platformRoutes = require('./routes/platformRoutes');
-
+const winston = require('winston');
 const app = express();
 
 //Start server
@@ -17,11 +17,15 @@ app.use(express.static('public'));
 app.use('/favicon.ico', express.static('public/images/favicon.ico'));
 
 //Grab form data
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 //Splash page
 app.get('/', (req, res) => {
     res.render('index');
+    //See where people come from
+    if (JSON.stringify(req.query) !== '{}') {
+        console.log(req.query);
+    }
 });
 
 //About pages
