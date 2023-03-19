@@ -1,6 +1,7 @@
 const express = require('express');
 const aboutRoutes = require('./routes/aboutRoutes');
 const platformRoutes = require('./routes/platformRoutes');
+const developmentRoutes = require('./routes/developmentRoutes');
 const winston = require('winston');
 const app = express();
 
@@ -33,6 +34,9 @@ app.use('/about', aboutRoutes);
 
 //About pages
 app.use('/platform', platformRoutes);
+
+//Development pages
+app.use('/development', developmentRoutes);
 
 //Default
 app.use((req, res) => {
