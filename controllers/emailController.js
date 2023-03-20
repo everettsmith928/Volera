@@ -30,7 +30,7 @@ const contact = (user) => {
         from: process.env.MAIL_USERNAME,
         to: user.contact_email,
         subject: 'Volera Contact Form',
-        html: 'Thank you for your question submission. We will get back to you in 72 hours in regards to: <br>'
+        html: '<h1>Thank you for your question submission.</h1><br>We will get back to you in 72 hours in regards to: <br><br>'
             + user.contact_subject + '<br><br>' + user.contact_form
     }
 

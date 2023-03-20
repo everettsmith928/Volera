@@ -26,28 +26,28 @@
                     <img src="/images/XRPSymbol.png" class="hidden" id="logo">
                 </div>
                 <div class="box">
-                    <h2 class="textcenter fadehide">The XRP Ledger</h2>
+                    <h2 class="textcenter hidden">The XRP Ledger</h2>
                     <p>Using distributed ledger technology, the XRP Ledger allows instant and seamless payments between users.
                         On Volera Platform the Escrow feature allows secure and promised movement of payments between clients and freelancers.<br><br>
                         Learn more about the XRP Ledger at xrpl.org</p>
                 </div>
                 <div class="box">
-                    <h2 class="textcenter fadehide">Escrow Payments</h2>
+                    <h2 class="textcenter hidden">Escrow Payments</h2>
                     <p>
                         As a native feature of the XRPL funds can be stored in a temporary locked account that the hiring enterprise or oracle retains a key to. Once the job is confirmed to be completed, they send the key to the freelancer to release the escrowed funds.
                         Never share this key with anyone that you don't want to receive the funds.
                     </p>
                 </div>
                 <div class="box">
-                    <h2 class="textcenter fadehide">Send Payments</h2>
+                    <h2 class="textcenter hidden">Send Payments</h2>
                     <p>Send funds directly to other users across the XRPL anytime instantly. Can be used for smaller jobs that do not require the security of escrow.</p>
                 </div>
                 <div class="box">
-                    <h2 class="textcenter fadehide">Wallet</h2>
-                    <p>Using the xumm Wallet you can keep track of your wallet activity, all payments in and out of your account. Total your income for the year, convert to other currencies, self-custody and secure your funds.</p>
+                    <h2 class="textcenter hidden">Hooks</h2>
+                    <p>Using the XRPL Labs proposed ammendment and the xumm Wallet, we plan to implement Layer-One Smart contracts into Volera's Escrow features. Providing very lightweight logic on the XRPL, and eventually within Volera's ecosystem.</p>
                 </div>
                 <div class="box">
-                    <h2 class="textcenter fadehide">Check Balance</h2>
+                    <h2 class="textcenter hidden">Check Balance</h2>
                     <p>Immediately see when funds are deposited into your account, keep track of funds from anywhere with your mobile device.</p>
                 </div>
             </div>
@@ -58,27 +58,26 @@
     <div id="userabout" style="display: none;">
         <div class="boxheader">
             <div class="box">
-                <h2 class="fadehide textcenter">Freelancers</h2>
+                <h2 class="hidden textcenter">Freelancers</h2>
                 <p>Showcase your best projects and techinical abilites. Keep your rates the same as any other platform and receive more of the total payout with a flat 5% fee across all jobs. That means more money in your pocket. Work contracts as an individual or as an organization.<br><br></p>
             </div>
             <div class="box">
-                <h2 class="fadehide textcenter">Enterprises</h2>
+                <h2 class="hidden textcenter">Enterprises</h2>
                 <p>A frictionless experience so startups and fortune 500 companies alike can easily integrate Volera into their hiring avenues. All for free.<br><br> </p>
             </div>
         </div>
     </div>
     <h2 class="abouttitle abouttitledropdown textcenter" id="aboutlist" onclick="toggleDisplay('walletabout')">Mobile Wallet &#10549;</h2>
     <div id="walletabout" style="display: none;">
-        <div class="box" id="azure">
-            
+        <div class="box" id="azure">  
             <div class="boxheader">
                 <div class="box">
-                    <img src="/images/xumm-icon.png" id="logo">
+                    <img src="/images/xumm-icon.png" class="hidden" id="logo">
                     <p>Required to fully utilize the Volera Platform. Xumm is the integrated wallet on Volera that allows the use of technical aspects of the underlying XRPL technology.<br><br>
                         Instant payments, User IDs, escrow, high-security, and self-custody. </p>
-                    <a class="button link textcenter" href="https://xumm.app/">Learn More</a>
+                    <a class="button link textcenter hidden" href="https://xumm.app/">Learn More</a>
                 </div>
-                <div class="fadehide box" id="image">
+                <div class="hidden box" id="image">
                     <img src="/images/xummcell.png" id="xumm">
                 </div>
             </div>
@@ -93,11 +92,29 @@
         <p style="color:azure;">Start hiring professionals at launch. Provide opportunites to freelancers across the platform for free. Create your contract, escrow your funds, and hire the right person for the job. For free, and pay as soon as the work is completed.</p>
     </div>
 </section>
-
+<section id="azure">
+    <div class="spacerdouble"></div>
+    <h2 class="textcenter hidden" style="font-size: 5rem;">Who We Are</h2>
+        <p>A startup based in Boise, Idaho developing Volera on the XRPL as a solution to the high-fee structures of current freelancing platforms.</p>
+<div class="contentfiller" id="azure">
+    <div class="box" id="azure">
+        <img src="/images/headshot1.jpg" style="height:300px;width:300px;display:block;margin:auto;object-fit: cover;">
+        <h2 class="abouttitle textcenter hidden" id="accent">Everett Smith</h2>
+        <h2 class="abouttitle textcenter hidden" id="accent">Co-Founder</h2>
+        <p class="hidden">Freelance artist learning to develop on the XRPL.</p>
+    </div>
+    <div class="box" id="azure">
+        <img src="/images/headshot2.jpg" style="height:300px;width:300px;display:block;margin:auto;">
+        <h2 class="abouttitle textcenter hidden" id="accent">Garrett Smith</h2>
+        <h2 class="abouttitle textcenter hidden" id="accent">Co-Founder</h2>
+        <p class="hidden">Computer Scientist with banking software experience.</p>
+    </div>
+</div> 
+</section>
 <section class="wave5 splashimage textcenter" style="height:100vh; justify-content:center; display:flex;">
-    <a class="button link textcenter" href="/about/signup">Sign Up</a>
+    <a class="button link textcenter hidden" href="/about/signup">Sign Up</a>
    
-    <a class="button link textcenter" href="/about/contact">Contact</a>
+    <a class="button link textcenter hidden" href="/about/contact">Contact</a>
 </section>
 
 <%- include('./partials/footer.ejs') %>

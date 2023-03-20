@@ -7,17 +7,17 @@
 
     </div>
     <div class="container">           
-        <a href = "/"><h4 class="title textcenter">volera</h4></a>
+        <a href = "/"><h4 class="title textcenter hidden">volera</h4></a>
     </div>
 
     <% if (userMessage.length > 0) { %>
-        <div class="usermessage" style="color:#00ff9b; border-color: #00ff9b;"><p><%- userMessage %></p>
+        <div class="usermessage hidden" style="color:#00ff9b; border-color: #00ff9b;"><p><%- userMessage %></p>
         <a href = "/"><p style="color: #00ff9b;"><b>Return Home</b></p></a>
         </div>
     <% } %>
 
     <form action = "/about/signup" method = "POST">
-        <div class="container">
+        <div class="container hidden">
             <label for="fname"></label>
             <input type="text" id="first_name" placeholder="First Name" name="first_name" required>
             <label for="lname"></label>
@@ -26,7 +26,7 @@
             <label for="email"></label>
             <input type="text" id="email" placeholder="Email" name="email" required>              
         </div>
-        <div class="container">
+        <div class="container hidden">
             <button type="submit" value="Submit">Submit</button>               
         </div>
     </form>
