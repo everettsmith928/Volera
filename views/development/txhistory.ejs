@@ -2,9 +2,9 @@
 <html lang="en">
 
 <%- include('../about/partials/header.ejs') %>
-<%- include('./partials/nav.ejs') %>
     <body style="display:block;">
-        <form action = "/development/wallet" method = "POST">
+        <%- include('./partials/nav.ejs') %>
+        <form action = "/development/txhistory" method = "POST">
             <div class="container hidden">
                 <label for="wallet"></label>
                 <input type="text" id="wallet" placeholder="Your Wallet Address" name="wallet" required>             
@@ -13,7 +13,6 @@
                 <button type="submit" value="Submit">Submit</button>               
             </div>
         </form>
-        
         <% if (userMessage.length > 0) { %>
             <div class="usermessage" style="color:#00ff9b; border-color: #00ff9b;"><p><%- userMessage %></p>
             </div>

@@ -3,13 +3,13 @@
 
 <%- include('../about/partials/header.ejs') %>
 
-    <body style="display:flex;">
+    <body style="display:block;">
         <%- include('./partials/nav.ejs') %>
-            <h1>Sample</h1>
-            <h2 id="sub">... (please sign in)</h2>
-            <button id="auth">Auth</button>
-            <button id="logout">Logout</button>
-
+            <h2 class="abouttitle textcenter hidden" style="color:#00ff9b">Sign-In using xumm Wallet</h2>
+            <div class="box hidden" style="display:flex;justify-items:center;">
+            <button class="button" id="auth" style="margin:40px; height:200px;width:200px;"><p>Login</p></button>
+            <button class="button" id="logout" style="margin:40px; height:200px;width:200px;"><p>Logout</p></button>
+            </div>
             <br /><br />
 
             <script type="module">
@@ -17,7 +17,7 @@
 
                 const xumm = new XummPkce('3b6c02ae-9a0f-464b-a5b6-853af38688ca ', {
                     implicit: true, // Implicit: allows to e.g. move from social browser to stock browser
-                    redirectUrl: document.location.href + '?custom_state=test'
+                    redirectUrl: 'volera.io/development/signin' + '?custom_state=test'
                 })
 
                 document.getElementById('auth').onclick = () => {
@@ -44,5 +44,6 @@
                     document.getElementById('sub').innerText = state?.me?.sub
                 })
             </script>
+        <%- include('./partials/footer.ejs') %>
     </body>
 </html>

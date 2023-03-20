@@ -1,9 +1,10 @@
 const express = require('express');
 const dbController = require('../controllers/dbController');
 const xummController = require('../controllers/xummController');
+const xrplController = require('../controllers/xrplController');
 const router = express.Router();
 
-//About
+//Development
 router.get('/', (req, res) => {
     res.render('development/development');
 })
@@ -14,12 +15,19 @@ router.get('/wallet', (req, res) => {
 })
 
 //Wallet POST
-router.post('/wallet', dbController.contact);
+router.post('/wallet', xrplController.getUserWallet);
 
 //Sign-in
-//Wallet GET
 router.get('/signin', (req, res) => {
     res.render('development/signin');
 })
+
+//Transaction History GET
+router.get('/txhistory', (req, res) => {
+    res.render('development/txhistory', {userMessage: ''});
+})
+
+//Transaction History POST
+router.post('/txhistory', xrplController.getUserTxHistory);
 
 module.exports = router;
