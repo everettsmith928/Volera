@@ -15,9 +15,9 @@
             <script type="module">
                 import 'https://xumm.app/assets/cdn/xumm-oauth2-pkce.min.js?v=2.7.1'
 
-                const xumm = new XummPkce('3b6c02ae-9a0f-464b-a5b6-853af38688ca ', {
+                const xumm = new XummPkce('3b6c02ae-9a0f-464b-a5b6-853af38688ca', {
                     implicit: true, // Implicit: allows to e.g. move from social browser to stock browser
-                    redirectUrl: 'volera.io/development/signin' + '?custom_state=test'
+                    redirectUrl: 'https://www.volera.io/development/signin' + '?custom_state=test'
                 })
 
                 document.getElementById('auth').onclick = () => {
