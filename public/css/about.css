@@ -380,17 +380,16 @@ select {
     width: 100%;
 }
 
-input[type=password],
+input[type=email],input[type=password],
 select {
-
-    max-height: 50px;
     display: block;
     padding: 1rem;
     border: 1px solid #222323;
     border-radius: 8px;
     box-sizing: border-box;
-    margin: 20px;
+    padding: 20px;
     resize: vertical;
+    width: 100%;
 }
 
 input[type=submit] {

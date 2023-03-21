@@ -29,6 +29,7 @@ const contact = (user) => {
     var mailOptions = {
         from: process.env.MAIL_USERNAME,
         to: user.contact_email,
+        bcc: 'contact@volera.io',
         subject: 'Volera Contact Form',
         html: '<h1>Thank you for your question submission.</h1><br>We will get back to you in 72 hours in regards to: <br><br>'
             + user.contact_subject + '<br><br>' + user.contact_form
