@@ -6,7 +6,7 @@ A new way to hire and retain freelancers in an ethical and sustainable way with 
 
 Utilizing a blockchain solution with low environmental impact, and a proven decade of 24/7 payments.
 
-Highly secure and tracable funds using the XRP Ledgers proposed hooks feature.
+Highly secure and tracable funds using the XRPL. Fee collected with proposed layer one smart contract hooks feature.
 
 ##Milestones
 
@@ -22,7 +22,7 @@ Using NodeJS
 	Views separated into 3 categories
 		Platform (Not yet started - but will be the actual website once launch)
 		Development - Tab to test functionalities as we develop
-		About - Marking / informational page while we develop the website
+		About - Marketing / informational page while we develop the website
 
 	Controllers
 		DB Controller
