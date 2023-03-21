@@ -23,10 +23,6 @@ app.use(express.urlencoded({ extended: true }));
 //Splash page
 app.get('/', (req, res) => {
     res.render('index');
-    //See where people come from
-    if (JSON.stringify(req.query) !== '{}') {
-        console.log(req.query);
-    }
 });
 
 //About pages

@@ -53,7 +53,6 @@ const getUserTxHistory = async (req, res) => {
     }
 }
 
-
 module.exports = {
     getUserTxHistory,
     getUserWallet
